@@ -1,0 +1,12 @@
+mkdir project
+cd project
+mkdir fonts
+mkdir images
+mkdir scripts
+mkdir style
+touch index.html
+cd style/
+touch footer.css
+touch header.css
+touch main.css
+touch slider.css

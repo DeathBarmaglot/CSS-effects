@@ -1,0 +1,162 @@
+/* Print version */
+@media print {
+  .tm-sidebar,
+  .tm-main-content section,
+  #home + section > #about {
+    display: none;
+  }
+  img {
+    width: 400px;
+  }
+  #home + section {
+    display: block;
+  }
+}
+
+/* Shadows & round corners for content blocks  */
+nav,
+section,
+.line-height {
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+
+/* Shadow & backgrounds for the banner  */
+.tm-content-header {
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
+.tm-banner-inner {
+  background-color: #fff;
+}
+
+/* Hover effect for navigation items*/
+.tm-nav-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Hover effect for Galery block */
+.box-bg :hover {
+  background-color: #87cefa;
+  color: #fff;
+}
+
+/* Align items in section ‘What We Do‘ */
+.flex-2-col {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Big first letter in each paragraphs */
+p::first-letter {
+  color: #87cefa;
+  font-size: 30px;
+}
+
+/* Vertical space between lines in the paragraphs  */
+p {
+  line-height: 35px;
+}
+
+/* Space at the start of the first line */
+p + p {
+  text-indent: 30px;
+}
+/* Each first paragraph which placed after h2 tag have to italic font style */
+h2 + p:first-of-type {
+  font-style: italic;
+}
+/* Padding for block styling */
+li.box.box-work {
+  padding: 7px;
+}
+
+/* The grey color of Big first letterfor block styling */
+li.box.box-work > div p::first-letter {
+  color: #888;
+  font-size: 30px;
+}
+
+/* Chess board for block styling */
+li.box.box-work:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* Change color of ‘How We Do It’ to gainsboro and add letter spacing 5px. */
+.carousel-content > .flex-item > h2.tm-section-title {
+  color: #dcdcdc;
+  letter-spacing: 5px;
+}
+
+/* Change color to black*/
+a {
+  color: #000;
+}
+
+/*Double underline for Engineers*/
+ol > li:nth-child(4) > a {
+  color: #87cefa;
+  text-decoration: underline double;
+}
+
+/* The hovered links without underline*/
+a:hover {
+  text-decoration: none;
+}
+
+/* The visited links with underline*/
+a:visited {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Add ‘new’ label to the end of words ‘Designers’ & ‘Strategists’. */
+a.text::after {
+  color: #f00;
+  content: "New";
+  font-size: smaller;
+  vertical-align: super;
+}
+
+/*  Add triangle to each section on the page using pseudo elements */
+section::before {
+  border-style: solid;
+  border-color: transparent #87cefa transparent transparent;
+  border-width: 35px 250px 0 0;
+  content: "";
+  height: 0;
+  position: absolute;
+  transform: scaleY(-1) scaleX(-1);
+  width: 0;
+}
+
+/* Remove triangle to the contact us section  */
+body > div > div.tm-main-content > section:nth-child(6)::before {
+  display: none;
+}
+
+/* Change submit button styles */
+.btn-primary {
+  background-color: #fff;
+  border-color: #87cefa;
+  border-radius: 0%;
+  float: right;
+  color: #87cefa;
+}
+
+/* Submit button with hover effect */
+.btn-primary:hover {
+  background-color: #87cefa;
+  border-color: #fff;
+  color: #f5f5f5;
+}
+
+/* Add asterisk to email field */
+.mandatory-field::after {
+  color: #f00;
+  content: " *";
+  font-size: smaller;
+  font-weight: bold;
+  vertical-align: super;
+}

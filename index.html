@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./html_pets/style.css">
+   </head>
+
+<style>
+    .top-section {
+        text-align: center;
+    }
+    @keyframes rows {
+    0%{left: 10%;}
+    25%{left: 40%;}
+    50%{left: 40%;}
+    75%{left: 10%;}
+    100%{left: 10%;}
+
+    0%{top: 10%;}
+    25%{top: 10%;}
+    50%{top: 40%;}
+    75%{top: 40%;}
+    100%{top: 10%;}
+}
+    .row {
+        margin-top: 15vw;
+        position: absolute;
+        width: 50vw;
+        animation: rows infinite 4s ease-in-out;
+    }
+    .cards-wrapper {
+        position: relative;
+        width: 100%;
+        height: calc(100vh-130px);
+        max-width: 1200px;
+    }
+    img {
+        border: #FFF solid 1px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .item {
+        position: absolute;
+        width: 50%;
+        transition-duration: 4s;
+        transition-delay: 0ms;
+    }
+    .item-1 {
+        z-index: -1;
+        left: 0;
+        top: calc(100% -237px);
+        transform: translate(0, -100%);
+    }
+    .item-2 {
+        z-index: -2;
+        transform: translate(-50%, 0);
+        left: 50%;
+    }
+    .item-3 {
+        z-index: -3;
+        left: 100%;
+        top: 100%;
+        transform: translate(-100%, -100%);
+    }
+    .btn {
+        border-radius: 20px;
+        background: #0f0;
+    }
+</style>
+
+<body>
+    <section class="top-section"></section>
+    <div class="container">
+        <div class="row">
+            <div class="cards-wrapper">
+                <div class="item item-1">
+                    <img src="https://raw.githubusercontent.com/DeathBarmaglot/tortino/master/data1/images/5.jpg"
+                        alt="1" title="Солодощі" id="1" />
+                </div>
+                <div class="item item-2">
+                    <img src="https://raw.githubusercontent.com/DeathBarmaglot/tortino/master/data1/images/3.jpg"
+                        alt="2" title="Солодощі" id="2" />
+                </div>
+                <div class="item item-3">
+                    <img src="https://raw.githubusercontent.com/DeathBarmaglot/tortino/master/data1/images/4.jpg"
+                        alt="3" title="Солодощі" id="3" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let items = document.querySelectorAll(".item");
+        let position = 0;
+
+        function rotate(items, position) {
+            for (i = 0; i < items.length; i++) {
+                const item = items[i];
+                item.classList.remove(`item-${(i + position - 1) % items.length + 1}`);
+                item.classList.add(`item-${(i + position) % items.length + 1}`);
+            };
+        }
+
+        function ani() {
+            setTimeout(() => {
+                position++;
+                rotate(items, position);
+                ani();
+            }, 2000)
+        }
+        ani();
+    </script>
+    <div class="wrapper">
+		<div class="img-area">
+			<div class="single-img">
+				<div class="img-content">
+					<div class="front" style="background-image: url(https://raw.githubusercontent.com/DeathBarmaglot/cupe/master/data1/images/1.jpg)">
+						<div class="inner">
+							<p>Cake</p>
+							
+						</div>
+					</div>
+					<div class="back" style="background-image: url(https://raw.githubusercontent.com/DeathBarmaglot/cupe/master/data1/images/2.jpg)">
+						<div class="inner">
+							<p><span>Cherry Pie</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

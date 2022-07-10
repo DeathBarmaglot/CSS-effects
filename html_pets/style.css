@@ -1,34 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@DeathBarmaglot 
-DeathBarmaglot
-/
-CSS-effects
-Public
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-CSS-effects/style.css
-@DeathBarmaglot
-DeathBarmaglot Add files via upload
-Latest commit fb03a11 on Aug 13
- History
- 1 contributor
-148 lines (129 sloc)  2.37 KB
-   
+  
 *{
 	margin: 0;
 	padding: 0;
@@ -163,9 +133,6 @@ h1{
 	transform-style: preserve-3d;
 }
 
-/*span{
-	color: #000;
-}*/
 @keyframes slidein {
   0%,50% {transform: rotateY(180deg);opacity: 0;}
   55%,95% {transform: rotateY(0deg);opacity: 1;}
@@ -174,18 +141,3 @@ h1{
   0%,45% {transform: rotateY(0deg);opacity: 1;}
   50%, 95% {transform: rotateY(-180deg);opacity: 0;}
 }
-
-
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
